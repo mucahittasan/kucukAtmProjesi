@@ -8,21 +8,21 @@ public class atmProjesi {
         Scanner scan = new Scanner(System.in);
 
         int bakiye = 1000, input;
-        int hesapNo = 112401, pasword = 12361528;
+        String hesapNo , pasword; /*ağam bunları string yap adam hesap numarası diye uzun bir yazı girerse stackoverflow olur*/ 
 
         while (true) {
             System.out.println("Hesap Numaranızı Giriniz :");
-            hesapNo = scan.nextInt();
+            hesapNo = scan.nextLine(); /*string olarak oku*/
 
             System.out.println("Parolanızı Giriniz :");
-            pasword = scan.nextInt();
+            pasword = scan.nextLine();
 
-            if (hesapNo == 112401 && pasword == 12361528) {
+            if (hesapNo == "112401" && pasword == "12361528") {
                 System.out.println("Başarıyla Giriş Yaptınız !");
 
             } else {
                 System.out.println("Kullanıcı Adı veya Parola Yanlış Tekrar Deneyiniz !");
-
+                   break; /*ağam while döngüsü kullanmazsan program alttaki kodlarla ile çalışır*/
             }
 
             System.out.println("-------STAUNCH BANKA HOŞ GELDİNİZ-------");
